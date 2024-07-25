@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Catcher</title>
+  </head>
+  <body>
+    <header>
+      <p>Jogo da Maça</p>
+    </header>
+    <main>
+      <canvas id="gameCanvas"></canvas>
+      <div id="gameStartDiv" class="gameUI">
+        <h1>Apanhador de Maças</h1>
+        <p>Você tem 30 segundos para pegar maçãs!</p>
+        <p>Se você pegar mais de 10 maçãs, você vence.</p>
+        <p>Se você pegar menos de 10 maçãs, você perde.</p>
+        <p>Clique no botão iniciar para começar</p>
+        <button id="gameStartBtn">JOGAR</button>
+      </div>
+      <div id="gameEndDiv" class="gameUI">
+        <h1>Você <span id="gameWinLoseSpan"></span></h1>
+        <h1>Pontos: <span id="gameEndScoreSpan"></span></h1>
+        <p>Atualize a página para jogar novamente</p>
+      </div>
+    </main>
+    <div class="controlButtons">
+      <button id="controlLeftButton" class="controlButton">←</button>
+      <button id="controlRightButton" class="controlButton">→</button>
+    </div>
+    <footer>
+      <img src="/public/logo.svg" alt="cpx" />
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

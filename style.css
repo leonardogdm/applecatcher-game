@@ -1,0 +1,113 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --dkClr: #131212;
+  --liClr: whitesmoke;
+  --accClr: #094d81;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--dkClr);
+  color: var(--liClr);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#gameCanvas {
+  border: 3px solid var(--accClr);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  z-index: 1;
+}
+
+.gameUI {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--accClr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.gameUI * {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#gameStartDiv {
+  display: flex;
+}
+
+#gameEndDiv {
+  display: none;
+}
+
+#gameStartBtn {
+  width: 100px;
+  padding: 8px 15px;
+  margin: 20px 0;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#gameStartBtn:hover {
+  background-color: var(--dkClr);
+  border: 0.5px solid var(--liClr);
+  color: var(--liClr);
+  cursor: pointer;
+}
+
+.controlButtons {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 500px;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.controlButtons button {
+  width: 80px;
+  height: 80px;
+
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--accClr);
+
+  background: var(--liClr);
+  border: 3px solid var(--accClr);
+}
